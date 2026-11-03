@@ -1,0 +1,140 @@
+.signup-page {
+  min-height: 100vh;
+  padding: 30px 20px;
+  background:
+    radial-gradient(circle at 10% 10%, #f1dfef 0, transparent 35%),
+    linear-gradient(135deg, #fcf8f0, #f8edf5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #40334f;
+}
+
+.signup-back {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #62516e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  padding: 36px;
+  border: 1px solid #eaddec;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 60px rgba(64, 51, 79, 0.09);
+}
+
+.signup-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: #eadcf2;
+  color: #73558b;
+  margin-bottom: 22px;
+}
+
+.signup-card h1 {
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.15;
+  margin: 0 0 12px;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.signup-subtitle {
+  color: #796d80;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.signup-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signup-card label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.signup-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #e3d8e7;
+  border-radius: 12px;
+  background: #fffdfd;
+  color: #40334f;
+  font: inherit;
+  outline: none;
+}
+
+.signup-card input:focus {
+  border-color: #a98abd;
+  box-shadow: 0 0 0 3px #eadcf2;
+}
+
+.signup-submit {
+  border: 0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 16px;
+  background: #73558b;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.signup-submit:hover {
+  background: #604475;
+}
+
+.signup-login {
+  text-align: center;
+  margin: 24px 0 0;
+  font-size: 14px;
+  color: #796d80;
+}
+
+.signup-login a {
+  color: #73558b;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 26px 20px;
+  }
+}
+
+
+.remember-me-row {
+  margin: 12px 0;
+}
+
+.remember-me-row label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remember-me-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #806486;
+  cursor: pointer;
+}
+
