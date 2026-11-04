@@ -1,3 +1,4 @@
+
 .signup-page {
   min-height: 100vh;
   padding: 30px 20px;
@@ -67,9 +68,13 @@
   margin-top: 8px;
 }
 
-.signup-card input {
+/* Common input styling */
+
+.signup-card input,
+.signup-select {
   width: 100%;
   box-sizing: border-box;
+  min-height: 46px;
   padding: 13px 14px;
   border: 1px solid #e3d8e7;
   border-radius: 12px;
@@ -77,12 +82,88 @@
   color: #40334f;
   font: inherit;
   outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.signup-card input:focus {
+.signup-card input::placeholder {
+  color: #a49aaa;
+}
+
+.signup-card input:focus,
+.signup-select:focus {
   border-color: #a98abd;
   box-shadow: 0 0 0 3px #eadcf2;
 }
+
+/* Gender dropdown */
+
+.signup-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.signup-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 42px;
+}
+
+.signup-select:invalid {
+  color: #a49aaa;
+}
+
+.signup-select option {
+  color: #40334f;
+  background: #fffdfd;
+}
+
+.signup-select-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #806486;
+  pointer-events: none;
+}
+
+/* Password fields and eye buttons */
+
+.signup-password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.signup-password-wrapper input {
+  padding-right: 48px;
+}
+
+.signup-eye-button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #806486;
+  cursor: pointer;
+}
+
+.signup-eye-button:hover {
+  background: #f0eaf1;
+}
+
+.signup-eye-button:focus-visible {
+  outline: 2px solid #a98abd;
+  outline-offset: 2px;
+}
+
+/* Submit button */
 
 .signup-submit {
   border: 0;
@@ -94,11 +175,29 @@
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .signup-submit:hover {
   background: #604475;
 }
+
+.signup-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Feedback message */
+
+.signup-message {
+  margin: 10px 0 0;
+  color: #62516e;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Login link */
 
 .signup-login {
   text-align: center;
@@ -112,12 +211,15 @@
   font-weight: 700;
 }
 
+/* Mobile layout */
+
 @media (max-width: 480px) {
   .signup-card {
     padding: 26px 20px;
   }
 }
 
+/* Existing remember-me styling */
 
 .remember-me-row {
   margin: 12px 0;
@@ -137,4 +239,3 @@
   accent-color: #806486;
   cursor: pointer;
 }
-
